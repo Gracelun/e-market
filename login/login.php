@@ -8,18 +8,22 @@
 		include '../include/header.php';
 	?>
 	<div>
-		<form>
+		<span>Sign in</span>
+		<form action = "actionlogin.php" method = "POST">
 			<div>
-				<span>帳號</span>
+				<span>Account</span>
 				<input type="text" name="account">
 			</div>
 			<div>
-				<span>密碼</span>
+				<span>Password</span>
 				<input type="password" name="password">
 			</div>
-			<input type="submit" name="login">
+			<div>
+				<input type="submit" name="login">
+			</div>
 		</form>
 	</div>
+	
 	<?php
 		include '../include/footer.php';
 	?>
