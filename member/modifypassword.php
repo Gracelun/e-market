@@ -4,7 +4,7 @@
 	<title>修改密碼</title>
 </head>
 <body>
-<form action = "actionmodify.php" method="POST">
+<form action = "action_modify.php" method="POST">
 	  舊密碼:<br>
 	  <input type="text" name="oldpassword" value="">
 	  <br>
