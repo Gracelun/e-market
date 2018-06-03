@@ -20,8 +20,6 @@ if(isset($_SESSION['isLogin'])){
 	        $birthday = $row["birthday"];
 	        $address = $row["address"];
 	        $phone = $row["phone"];
-	        $email = $row["email"];
-	        
 	    }
 	}
 }
@@ -47,9 +45,6 @@ if(isset($_SESSION['isLogin'])){
 	  <br>
 	  address:<br>
 	  <input type="text" name="address" value="<?= $address ?>">
-	  <br>
-	  email:<br>
-	  <input type="text" name="email" value="<?= $email ?>">
 	  <br><br>
 	  <input type="submit" value="修改">
 	</form>

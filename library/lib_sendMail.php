@@ -29,7 +29,7 @@ class mail{
 		    
 		    $mail->Subject ="Shopping 驗證信"; 
 
-			$url = 'http://'.$_SERVER["HTTP_HOST"]."/e-market/member/authorize.php?authorize=$token";
+			$url = 'http://'.$_SERVER["HTTP_HOST"]."/e-market/member/action_authorize.php?authorize=$token";
 			$body = "
 			<!DOCTYPE html>
 			<html>

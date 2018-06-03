@@ -11,9 +11,8 @@ $sex = $_POST['sex'];
 $birthday = $_POST['birthday'];
 $address = $_POST['address'];
 $phone = $_POST['phone'];
-$email = $_POST['email'];
 
-$sql = "UPDATE member_information SET `Name` = '$name',`sex` = '$sex',`birthday` = '$birthday',`address` = '$address',`phone` = '$phone',`email` = '$email'  WHERE  `member_ID`= '".$_SESSION['userID']."'";
+$sql = "UPDATE member_information SET `Name` = '$name',`sex` = '$sex',`birthday` = '$birthday',`address` = '$address',`phone` = '$phone' WHERE  `member_ID`= '".$_SESSION['userID']."'";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";

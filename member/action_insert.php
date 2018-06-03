@@ -4,29 +4,24 @@ require('../library/lib_member.php');
 require('../library/lib_sendMail.php');
 header('Content-type: text/html; charset=utf-8'); // 把PHP檔編碼設為UTF8
 
-$account = $_POST['account'];
-$password = $_POST['password'];
-$name = $_POST['name'];
-$sex = $_POST['sex'];
-$birthday = $_POST['birthday'];
-$address = $_POST['address'];
-$phone = $_POST['phone'];
 $email = $_POST['email'];
+$password = $_POST['password'];
+// $phone = $_POST['phone'];
 
-$member = new member();
+$member = new member();//呼叫lib_member
 // 新增會員註冊
-$insert = $member->create($name, $account, $password);
+$insert = $member->create($email, $password);
 if ($insert == true){
-	$id = $member->getInfo($account, $password);
+	$id = $member->getInfo($email, $password);
 	if($id != FALSE){
 		echo "ID = $id";
-		$member->insertInfo($id, $name, $sex, $birthday, $address, $phone, $email);
-		$token = $member->updateToken($id, $account, $password);
+		// $member->insertInfo($id, $name, $sex, $birthday, $address, $phone);
+		$token = $member->updateToken($id, $email, $password);
 
 		$mail = new mail();
 		$mail->sendMail($name, $email, $token);
 
-		// header('Location: authorize.php');
+		header('Location: authorize.php');
 	}else{
 		echo "不存在此用戶";
 	}

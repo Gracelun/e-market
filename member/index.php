@@ -17,8 +17,7 @@ if(isset($_SESSION['isLogin'])){
 	        $birthday = $row["birthday"];
 	        $address = $row["address"];
 	        $phone = $row["phone"];
-	        $email = $row["email"];
-	        echo "$name<br /> $sex <br /> $birthday <br /> $address <br /> $phone <br /> $email <br />";
+	        echo "$name<br /> $sex <br /> $birthday <br /> $address <br /> $phone <br />";
 	        echo '<a href="/e-market/member/modifypassword.php">修改密碼</a>';
 	    }
 	}

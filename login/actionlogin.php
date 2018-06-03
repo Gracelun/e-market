@@ -8,21 +8,29 @@ $account = $_POST['account'];
 $password = $_POST['password'];
 
 // 搜尋資料庫資料
-$sql = "SELECT * FROM `member` where `ACCOUNT` = '$account' && `PASSWORD` = '$password'";
+$sql = "SELECT * FROM `member` LEFT JOIN `member_information` ON `member`.`ID` = `member_information`.`member_ID` WHERE `email` = '$account' && `PASSWORD` = '$password'";
 $result = $conn->query($sql);
 
 if ($result->num_rows == 1) {
 	while($row = $result->fetch_assoc()) {
-        $name = $row["NAME"];
+        $name = $row["Name"];
         $id = $row["ID"];
+        $authorize = $row["authorize"];
     }
-	$_SESSION['isLogin'] = True;
-	$_SESSION['userName'] = $name;
-	$_SESSION['userID'] = $id;
-    header('Location: ../index.php');
+    if($authorize == 1){
+    	$_SESSION['isLogin'] = True;
+		$_SESSION['userName'] = $name;
+		$_SESSION['userID'] = $id;
+		header('Location: ../index.php');
+    }else{
+    	echo "請至信箱取得認證信";
+    	echo '<a href="/e-market/member/reSendemail.php">重發驗證信</a>';
+    }
+	
 } else {
-    echo "帳號或密碼錯誤。";
+	    echo "帳號或密碼錯誤。";
 }
+
 
 // 新增
 // $sql = "INSERT INTO member (NAME, ACCOUNT, PASSWORD, EMAIL) VALUES ('John', 'John', '0000', 'john@example.com')";

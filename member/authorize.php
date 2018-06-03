@@ -5,6 +5,7 @@
 </head>
 <body>
 //顯示至信箱收取認證信
-<p>至信箱收取認證信</p>
+<p>請至信箱收取認證信</p>
+<a href="/e-market/index.php">首頁</a>
 </body>
 </html>
