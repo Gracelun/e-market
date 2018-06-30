@@ -7,60 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link rel="stylesheet" href="/e-market/library/bootstrap-4.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../library/css/header.css">
-	<style type="text/css">
-		body{
-			background-color: #F1F0F0;
-		}
-		.order_frame{
-			margin-bottom: 20px;
-		}
-		.product{
-			padding: 20px 10px;
-			background-color: #FFFFFF;
-			padding-bottom: 20px;
-		}
-		.order_header{
-			background-color: #FFFFFF;
-			padding: 20px 0;
-			border-bottom: 1px solid #ccc;
-		}
-		.order_footer{
-			background-color: #FFFFFF;
-			padding: 20px 0;
-		}
-		#framsix{
-			background-color: #FFFFFF;
-			margin-top: 50px;
-			height: 150px;
-		}
-		#cost{
-			font-size: 30px;
-			color: #F0433A;
-			font-weight:bold;
-			margin-top: 10px;
-		}
-		#costname{
-			font-size: 15px;
-			color: #333A42;
-		}
-		#textone{
-			margin-left:750px;
-			
-		}
-		#line{
-			background-color: #A6A5A1;
-		}
-		.oder_cost{
-			margin-left:550px;
-			margin-top: 50px;
-			color: #A6A5A1;
-		}
-		.liner{
-			border-bottom: 1px solid #ccc;
-		}
-
-	</style>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../library/css/main.css">
 </head>
 <body>
 	<!-- HEADER TOP -->
@@ -68,11 +16,13 @@
 	include '../include/header.php';
 	?>
 	<!-- HEADER END -->
-	<div class="container" id = "frame">
+
+	<!-- SIDE MENU TOP -->
+	<div class="container">
 		<div class="row">
 			<div class="col-sm-2">
-				<div>分類</div>
-				<form>
+				<form id="classification_selector">
+					<a href=""><h4><b>分類</b><i class="fas fa-angle-down"></i></h4></a>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
 						<label class="form-check-label" for="defaultCheck1">
@@ -163,8 +113,10 @@
 							戶外與運動用品
 						</label>
 					</div>
-					<div class = "liner"></div>
-					<div>出貨地點</div>
+
+					<hr>
+
+					<a href=""><h4><b>出貨地點</b><i class="fas fa-angle-down"></i></h4></a>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" value="" id="defaultCheck15">
 						<label class="form-check-label" for="defaultCheck15">
@@ -177,8 +129,9 @@
 							海外
 						</label>
 					</div>
-					<div class = "liner"></div>
-					<div>運送方式</div>
+
+					<hr>
+					<a href=""><h4><b>運送方式</b><i class="fas fa-angle-down"></i></h4></a>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" value="" id="defaultCheck15">
 						<label class="form-check-label" for="defaultCheck15">
@@ -203,143 +156,85 @@
 							郵政
 						</label>
 					</div>
-					<button type="submit">Submit</button>
-				</div>
+					<button class="btn my-2 my-sm-0" type="submit">搜尋</button>
+				</form>
+			</div>
+			<!-- SIDE MENU END -->
 
-			</form>
 			<div class="col-sm-10">
-				<nav class="navbar navbar-expand-lg navbar-light bg-light">
-					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-						<div class="navbar-nav">
-							<a class="nav-item nav-link active" href="#">綜合排名 <span class="sr-only">(current)</span></a>
-							<a class="nav-item nav-link" href="#">最新</a>
-							<a class="nav-item nav-link" href="#">最熱銷</a>
-							<a class="nav-item nav-link disabled" href="#">價格</a>
-
-						</div>
-					</div>
+				<!-- UPPER MENU TOP -->
+				<nav class="page_selector">
+					<a class="item active" href="#">綜合排名</a>
+					<a class="item" href="#">最新</a>
+					<a class="item" href="#">最熱銷</a>
+					<a class="item" href="#">價格</a>
 				</nav>
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-3">
-							<a href="product.php">
-								<div class="card" ">
-									<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									</div>
+				<!-- UPPER MENU END -->
+
+
+				<div class="row">
+					<div class="col-sm-3 product">
+						<a href="product.php">
+							<div class="card" ">
+								<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
+								<div class="card-body">
+									<p class="card-text">夏季特價 洗臉機</p>
 								</div>
-							</a>
-						</div>
-						
-						<div class="col-sm-3">
-							<a href="product.php">
-								<div class="card" ">
-									<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-sm-3">
-							<a href="product.php">
-								<div class="card" ">
-									<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-sm-3">
-							<a href="product.php">
-								<div class="card" ">
-									<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									</div>
-								</div>
-							</a>
-						</div>
+							</div>
+						</a>
 					</div>
-					<div class="row">
-						<div class="col-sm-3">
-							<a href="product.php">
-								<div class="card" ">
-									<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									</div>
+
+					<div class="col-sm-3 product">
+						<a href="product.php">
+							<div class="card" ">
+								<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
+								<div class="card-body">
+									<p class="card-text">出來騙錢的 洗臉機</p>
 								</div>
-							</a>
-						</div>
-						<div class="col-sm-3">
-							<a href="product.php">
-								<div class="card" ">
-									<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-3 product">
+						<a href="product.php">
+							<div class="card" ">
+								<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
+								<div class="card-body">
+									<p class="card-text">誇大不實的洗臉機</p>
 								</div>
-							</a>
-						</div>
-						<div class="col-sm-3">
-							<a href="product.php">
-								<div class="card" ">
-									<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-3 product">
+						<a href="product.php">
+							<div class="card" ">
+								<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
+								<div class="card-body">
+									<p class="card-text">華而不實的洗碗機</p>
 								</div>
-							</a>
-						</div>
-						<div class="col-sm-3">
-							<a href="product.php">
-								<div class="card" ">
-									<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-3 product">
+						<a href="product.php">
+							<div class="card" ">
+								<img class="card-img-top" src="../img/luna.jpg" alt="Card image cap">
+								<div class="card-body">
+									<p class="card-text">華而不實的洗碗機</p>
 								</div>
-							</a>
-						</div>
+							</div>
+						</a>
 					</div>
 				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<?php
-				include '../include/footer.php';
-				?>
-				<!-- script 多半放置code最底行(執行效能問題) -->
-				<script src="/e-market/library/js/jquery-3.3.1.min.js"></script>
-				<script type="text/javascript" src="/e-market/library/imsky-holder/holder.min.js"></script>
-				<script src="/e-market/library/bootstrap-4.1.0/js/bootstrap.min.js"></script>
-			</body>
-			</html>
+			</div>
+		</div>
+	</div>
+</div>
+<?php
+include '../include/footer.php';
+?>
+<!-- script 多半放置code最底行(執行效能問題) -->
+<script src="/e-market/library/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/e-market/library/imsky-holder/holder.min.js"></script>
+<script src="/e-market/library/bootstrap-4.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

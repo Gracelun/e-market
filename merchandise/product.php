@@ -5,82 +5,19 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<link rel="stylesheet" href="/e-market/library/bootstrap-4.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../library/css/header.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/e-market/library/css/main.css">
 	<style type="text/css">
-		body{
-			background-color: #F1F0F0;
-		}
-		.order_frame{
-			margin-bottom: 20px;
-		}
-		.product{
-			padding: 20px 10px;
-			background-color: #FFFFFF;
-			padding-bottom: 20px;
-		}
-		.order_header{
-			background-color: #FFFFFF;
-			padding: 20px 0;
-			border-bottom: 1px dotted #ccc;
-		}
-		.order_footer{
-			background-color: #FFFFFF;
-			padding: 30px 10px;
-		}
-		#framsix{
-			background-color: #FFFFFF;
-			margin-top: 50px;
-			height: 150px;
-		}
-		#cost{
-			font-size: 30px;
-			color: #F0433A;
-			font-weight:bold;
-			margin-top: 10px;
-		}
-		
-		#textone{
-			margin-left:750px;
-			
-		}
-		#line{
-			background-color: #A6A5A1;
-		}
-		
-		.liner{
-			border-bottom: 2px solid #ccc;
-		}
-		#star{
-			height: 20px;
-			width: 20px;
-		}
-		#oder{
-			padding: 20px;
-		}
-		.headerbar{
-			margin-top: 20px;
-			background-color: #FFFFFF;
-			padding: 20px;
-			border-bottom: 1px dotted #ccc;
-		}
-		.barborderleft{
-			border-left: 2px solid #ccc;
-			
-		}
-		.bar{
-			margin-top: 20px;
-			padding: 20px;
-		}
-
-
-	</style>
+</style>
 </head>
 <body>
 	<!-- HEADER TOP -->
 	<?php
 	include '../include/header.php';
+	include '../library/lib_merchandise.php';
+	$pid = $_GET['pid'];
+	$merchandise = new merchandise($pid);
 	?>
 	<!-- HEADER END -->
 
@@ -95,13 +32,7 @@
 					</ol>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img class="d-block w-100" src="../img/luna.jpg" alt="First slide">
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="../img/luna.jpg" alt="Second slide">
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100" src="../img/luna.jpg" alt="Third slide">
+							<img class="d-block w-100" src="<?=$merchandise->photo_path?>" alt="First slide">
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -115,15 +46,19 @@
 				</div>
 			</div>
 			<div class="col-8">
-				<div class="row" id = "oder" style="background-color: white">
+				<div class="row" id="oder" style="background-color: white">
 					<div class="col-12 order_header">
-						現貨+實拍 韓版幾何菱形櫻桃珍珠大耳釘女日韓時尚百搭耳環耳飾品
+						<?=$merchandise->name?>
 					</div>
 					<div class="col-12 order_header">
 						賣場折扣碼
 					</div>
 					<div class="col-12 order_header">
-						<img src="../img/star.png" alt="star" id ="star"><img src="../img/star.png" alt="star" id ="star"><img src="../img/star.png" alt="star" id ="star"><img src="../img/star.png" alt="star" id ="star"><img src="../img/star.png" alt="star" id ="star">
+						<img src="../../img/star.png" alt="star" id ="star">
+						<img src="../../img/star.png" alt="star" id ="star">
+						<img src="../../img/star.png" alt="star" id ="star">
+						<img src="../../img/star.png" alt="star" id ="star">
+						<img src="../../img/star.png" alt="star" id ="star">
 						<a>4.9/5 (38評價) | 月銷售57</a>
 					</div>
 					<div class="col-12 order_header">
@@ -139,71 +74,50 @@
 					</div>
 					
 					<div class="col-12 align-self-end order_header">
-						<button type="button" class="btn btn-danger float-right">直接購買</button>
-
-						<button type="button" class="btn btn-outline-danger float-right">加入購物車</button>
-					</div>
-				</div>
-				<div class="row order_footer">
-					<div class="col-3">
-						<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-							15天鑑賞期
-						</button>
-					</div>
-					<div class="col-3">
-						<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-							退貨無負擔
-						</button>
-					</div>
-					<div class="col-3">
-						<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-							假一賠二
-						</button>
-					</div>
-					<div class="col-3">
+						<div style="text-align: right;">
+							<form>
+								<button type="button" class="btn btn-danger">刪除商品</button>
+							</form>
+							<form>
+								<button type="button" class="btn btn-danger">修改商品</button>
+							</form>
+							<button type="button" class="btn btn-danger">直接購買</button>
+							<button type="button" class="btn btn-outline-danger">加入購物車</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- 上 -->
-		<div class="row headerbar">
+		<div class="row block" id="user_info">
 			<div class="col-3">
-				<img src="../img/luna.jpg" alt="" class="rounded-circle" width="60" height="60">
-				<span>gra_e</span>
+				<img src="../img/luna.jpg" alt="" class="rounded-circle user_picture" width="60" height="60">
+				<span class="user_name">gra_e</span>
 				<button type="button" class="btn btn-outline-primary btn-sm">查看賣場</button>
 				<button type="button" class="btn btn-outline-primary btn-sm">關注</button>
 			</div>
 			<div class="col-3 barborderleft">
-				<div><span>2015</span></div>
+				<div><span class="score">2015</span></div>
 				<div>商品</div>
 			</div>
 			<div class="col-3 barborderleft">
-				<div><span>2015</span></div>
+				<div><span class="score">2015</span></div>
 				<div>商品評價</div>
 			</div>
 			<div class="col-3 barborderleft">
-				<div><span>2015</span></div>
+				<div><span class="score"><?=$merchandise->created_at?></span></div>
 				<div>加入時間</div>
 			</div>
 		</div>
-		<div class="row ">
-			<nav class="col-12 navbar navbar-expand-lg navbar-light bg-light bar">
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div class="navbar-nav">
-						<a class="nav-item nav-link active" href="#">商品詳情 <span class="sr-only">(current)</span></a>
-						<a class="nav-item nav-link" href="#">商品評價</a>
-						<a class="nav-item nav-link" href="#">商品留言</a>
-					</div>
-				</div>
+		<div class="row">
+			<nav class="page_selector bar">
+				<a class="item active" href="#">商品詳情</a>
+				<a class="item" href="#">商品評價</a>
+				<a class="item" href="#">最熱銷</a>
+				<a class="item" href="#">價格</a>
 			</nav>
-		</div>
-
-		<div class="row ">
-			<div class="col-12 headerbar" style="margin-top: 0">
-				<div>材質:合金</div>
-				<div>風格:韓版韓式/韓國風</div>
-				<div>貨號:02-10-R100</div>
-				<div>品牌:泰妃</div>
+			<div class="col-12 block">
+				<?=$merchandise->introduction?>
 			</div>
 		</div>
 	</div>

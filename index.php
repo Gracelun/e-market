@@ -5,11 +5,9 @@
 	<META HTTP-EQUIV="Expires" CONTENT="-1">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<link rel="stylesheet" href="/e-market/library/bootstrap-4.1.0/css/bootstrap.min.css">
-
-	<link rel="stylesheet" type="text/css" href="library/css/header.css">
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="library/css/main.css">
 	<title></title>
 </head>
 <body>
@@ -21,17 +19,17 @@
 	
 	<div class="container" id = "carousel">
 		<div class="row">
-			<div class="col-8" id="carousel_ads">
+			<div class="col-8">
 				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img class="d-block w-100" src="holder.js/1100x300" alt="First slide">
+							<img class="d-block w-100" src="img/carousel1.png">
 						</div>
 						<div class="carousel-item">
-							<img class="d-block w-100" src="holder.js/1100x300" alt="Second slide">
+							<img class="d-block w-100" src="img/carousel2.png" >
 						</div>
 						<div class="carousel-item">
-							<img class="d-block w-100" src="holder.js/1100x300" alt="Third slide">
+							<img class="d-block w-100" src="img/carousel3.png">
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -45,83 +43,74 @@
 				</div>
 			</div>
 			<div class="col-4" id = "carousel_ads2">
-				<div class="col" id = "carousel_ads3">
-					<img src="holder.js/360x150">
-				</div>
-				<div class="w-100"></div>
-				<div class="col" id = "carousel_ads4">
-					<img src="holder.js/360x150">
-				</div>
-			</div>
-
-			<div class="w-100" ></div>
-			<div class ="row" id ="img_item">
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
-				<div class="col"><img class="d-block w-100" src="holder.js/110x96" alt="First slide"></div>
+				<img src="img/ad.png" height="">
+				<img src="img/ad.png">
 			</div>
 		</div>
-		<div class="row" id = "classification">
+		<div class="row" id="classification">
 			<div class="w-100"></div>
-			<div class="col">
-				<a href="http://www.w3big.com/">女生衣著</a>
+			<div class="col item_class left" onclick="location.href='merchandise/shoppingproduct.php'"">
+				<i class="fas fa-female"></i>
+				<p>女生衣著</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">美妝保健</a>
+			<div class="col item_class">
+				<i class="fas fa-paint-brush"></i>
+				<p>美妝保健</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">嬰幼童與母親</a>
+			<div class="col item_class">
+				<p>嬰幼童與母親</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">居家生活</a>
+			<div class="col item_class">
+				<i class="fas fa-couch"></i>
+				<p>居家生活</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">女生配件</a>
+			<div class="col item_class">
+				
+				<p>女生配件</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">女鞋</a>
+			<div class="col item_class">
+				<i class="fas fa-utensils"></i>
+				<p>美食</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">女生包包/精品</a>
+			<div class="col item_class">
+				<i class="fas fa-ticket-alt"></i>
+				<p>票券</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">寵物</a>
+			<div class="col item_class">
+				<i class="fas fa-paw"></i>
+				<p>寵物</p>
 			</div>
-		</div>
-		<div class="row" id = "classification">
 			<div class="w-100"></div>
-			<div class="col">
-				<a href="http://www.w3big.com/">男生衣著</a>
+			<div class="col item_class lower left">
+				<p>男生衣著</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">手機平板與周邊</a>
+			<div class="col item_class lower">
+				<i class="fas fa-mobile-alt"></i>
+				<p>手機平板與周邊</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">3C相關</a>
+			<div class="col item_class lower">
+				<i class="fas fa-laptop"></i>
+				<p>3C相關</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">家電影音</a>
+			<div class="col item_class lower">
+				<i class="fas fa-film"></i>
+				<p>家電影音</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">男生包包與配件</a>
+			<div class="col item_class lower">
+				
+				<p>男生包包與配件</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">男鞋</a>
+			<div class="col item_class lower">
+				
+				<p>男鞋</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">戶外與運動用品</a>
+			<div class="col item_class lower">
+				<i class="fas fa-volleyball-ball"></i>
+				<p>戶外與運動用品</p>
 			</div>
-			<div class="col">
-				<a href="http://www.w3big.com/">汽機車零件百貨</a>
+			<div class="col item_class lower">
+				<i class="fas fa-car"></i>
+				<p>汽機車零件百貨</p>
 			</div>
 		</div>
 	</div>
